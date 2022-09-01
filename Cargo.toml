@@ -10,8 +10,3 @@ syn = "1.0"
 quote = "1.0"
 proc-macro2 = "1.0"
 pyo3 = {version = "0.17", features=["auto-initialize",]}
-num_enum = "0.5.7"
-
-[lib]
-#proc-macro = true
-crate-type = ["cdylib"]
