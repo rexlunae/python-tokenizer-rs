@@ -1,6 +1,6 @@
 import tokenize as t
 import token
-from io import BytesIO
+from io import StringIO
 
 def get_token_numbers():
     lookup = {}
@@ -12,5 +12,5 @@ def get_token_numbers():
 
 
 def tokenize(input):
-    val = list(t.tokenize(BytesIO(input.encode('utf-8')).readline))
+    val = list(t.generate_tokens(StringIO(input).read))
     return val
