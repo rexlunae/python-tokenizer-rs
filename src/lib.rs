@@ -7,7 +7,7 @@ use std::collections::HashMap;
 
 /// The direct Rust equivalent of the Python class of the same name,
 /// albeit augmented with the token type text as a string.
-#[derive(Debug, FromPyObject)]
+#[derive(Clone, Debug, FromPyObject)]
 pub struct TokenInfo {
     #[pyo3(attribute("type"))]
     pub token_type: usize,  /// type
